@@ -6,14 +6,41 @@ import LearnUseReducer from './1_useReducer/learnUseReducer'
 import LearnUseEffect from './2_useEffect/learnUseEffect'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [user, setUser] = useState({
+        name: "Anuj",
+        age: 29
+    });
 
-  return (
-    <>
-      {/* <LearnUseReducer /> */}
-      <LearnUseEffect />
-    </>
-  )
+    function handleToggleName() {
+      setUser({
+        ...user,
+        name: user.name === 'Anuj' ? 'Shivam': 'Anuj'
+      })
+    }
+
+    return (
+        // <AuthContext.Provider value={{user, setUser}}>
+        <AuthProvider value={{ user, setUser }}>
+            <>
+                {/* <LearnUseReducer /> */}
+                {/* <LearnUseEffect /> */}
+                {/* <LearnUseId /> */}
+
+                {/* <LearnUseRef /> */}
+
+                {/* <LearnUseRef2 /> */}
+
+                {/* <button onClick={handleToggleName}>Toggle Name In App</button>
+
+                <Dashboard /> */}
+
+                {/* <LearnCustomHook /> */}
+
+                <CreatePostWithRQ />
+            </>
+        </AuthProvider>
+        // </AuthContext.Provider>
+    );
 }
 
 export default App
