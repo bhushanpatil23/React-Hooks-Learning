@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import LearnUseReducer from './1_useReducer/learnUseReducer'
 import LearnUseEffect from './2_useEffect/learnUseEffect'
+import LearnCustomHook from './6_customHook/LearnCustomHook'
 
 function App() {
   const [user, setUser] = useState({
@@ -20,26 +21,29 @@ function App() {
 
     return (
         // <AuthContext.Provider value={{user, setUser}}>
-        <AuthProvider value={{ user, setUser }}>
-            <>
-                {/* <LearnUseReducer /> */}
-                {/* <LearnUseEffect /> */}
-                {/* <LearnUseId /> */}
+        // <AuthProvider value={{ user, setUser }}>
+        //     <>
+        //         {/* <LearnUseReducer /> */}
+        //         {/* <LearnUseEffect /> */}
+        //         {/* <LearnUseId /> */}
 
-                {/* <LearnUseRef /> */}
+        //         {/* <LearnUseRef /> */}
 
-                {/* <LearnUseRef2 /> */}
+        //         {/* <LearnUseRef2 /> */}
 
-                {/* <button onClick={handleToggleName}>Toggle Name In App</button>
+        //         {/* <button onClick={handleToggleName}>Toggle Name In App</button>
 
-                <Dashboard /> */}
+        //         <Dashboard /> */}
 
-                {/* <LearnCustomHook /> */}
+                
 
-                <CreatePostWithRQ />
-            </>
-        </AuthProvider>
+        //         <CreatePostWithRQ />
+        //     </>
+        // </AuthProvider>
         // </AuthContext.Provider>
+
+        <LearnCustomHook/>
+
     );
 }
 
